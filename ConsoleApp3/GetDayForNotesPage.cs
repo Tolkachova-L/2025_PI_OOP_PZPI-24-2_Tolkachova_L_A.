@@ -25,7 +25,13 @@ namespace ConsoleApp3
         {
             Console.WriteLine("Введiть дату потрiбних записiв");
 
-            if (_noteManager.ValidateStartTime(_date))
+            if (_error == "CANCEL")
+            {
+                _error = "";
+                _date = DateTime.MinValue;
+                return _previous;
+            }
+            else if (_noteManager.ValidateStartTime(_date))
             {
                 Console.WriteLine();
             }
