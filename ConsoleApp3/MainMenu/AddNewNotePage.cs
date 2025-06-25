@@ -27,7 +27,6 @@ namespace ConsoleApp3
 
         protected override IPage RunImpl()
         {
-            Console.WriteLine();
             Console.WriteLine("СТВОРЕННЯ НОВОГО ЗАПИСУ");
             Console.WriteLine();
             Console.WriteLine("При натисканнi ENTER данi зберiгаються");
