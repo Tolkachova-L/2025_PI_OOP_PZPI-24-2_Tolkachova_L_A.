@@ -41,7 +41,6 @@ namespace ConsoleApp3
             }
             Console.ResetColor();
             Console.WriteLine();
-            Console.WriteLine(Footer);
         }
 
         protected override IPage RunImpl()
