@@ -31,10 +31,6 @@ namespace ConsoleApp3
             {
                 return _previousPage;
             }
-            if (keyPressed == ConsoleKey.F1)
-            {
-                return new HelpPage(this);
-            }
             return null;
         }
     }
