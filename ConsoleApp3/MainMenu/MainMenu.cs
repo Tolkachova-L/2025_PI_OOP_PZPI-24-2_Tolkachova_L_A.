@@ -9,7 +9,8 @@ namespace ConsoleApp3
     internal class MainMenu : Menu
     {
         protected override Dictionary<string, IPage> Options { get; }
-        protected override string Title => "Щоденник";
+        protected override string Title => "Щоденник\n" +
+            "(Рекомендуємо натиснути F1 та прочитати основнi функцiї кнопок)\n";
         protected override string Footer => GetClosestNote();
         private NoteManager _noteManager = new NoteManager();
         public MainMenu()
