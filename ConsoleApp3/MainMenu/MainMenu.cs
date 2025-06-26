@@ -30,31 +30,5 @@ namespace ConsoleApp3
             }
             return null;
         }
-
-        private string GetClosestNote()
-        {
-            string neededNote = "";
-            var allNotes = _noteManager.GetNotes();
-            DateTime? closestDate = null;
-            if (allNotes != null && allNotes.Any(x => x != null))
-            {
-                closestDate = allNotes.Where(x => x != null).Min(x => x.Date);
-            }
-            if (closestDate == null)
-            {
-                closestDate = DateTime.MinValue;
-            }
-            var closestNote = allNotes.Find(x => x.Date == closestDate);
-
-            if (closestDate != DateTime.MinValue && closestNote != null)
-            {
-                neededNote = $"Найближчий запис: {closestNote.Date}, iнформацiя: {closestNote.Info}";
-            }
-            else
-            {
-                neededNote = "Найближчий запис: записiв не знайдено";
-            }
-            return neededNote;
-        }
     }
 }
