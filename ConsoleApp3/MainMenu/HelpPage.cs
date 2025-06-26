@@ -19,7 +19,7 @@ namespace ConsoleApp3
         {
             Console.Clear();
             Console.WriteLine("F1 - допомога");
-            Console.WriteLine("ENTER - вибрати");
+            Console.WriteLine("ENTER - вибрати/пiдтвердити");
             Console.WriteLine("ESC - повернутися назад");
             Console.WriteLine("ARROW UP '↑' - попереднiй пункт меню");
             Console.WriteLine("ARROW DOWN '↓' - наступний пункт меню");
