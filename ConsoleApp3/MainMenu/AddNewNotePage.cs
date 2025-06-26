@@ -13,12 +13,14 @@ namespace ConsoleApp3
         private NoteManager _noteManager = new NoteManager();
         private NoteAddedPage _noteAddedPage;
 
+        //стани класу
         private string _error;
         private DateTime _date = DateTime.MinValue;
         private int _duration = -1;
         private string _venue = "";
         private string _info = "";
 
+        //конструктор класу
         public AddNewNotePage(IPage previous)
         {
            _previousPage = previous;
@@ -33,6 +35,7 @@ namespace ConsoleApp3
             Console.WriteLine("Щоб ввийти, введiть в консоль 'CANCEL'");
             Console.WriteLine();
 
+            //перевіряє чи підходить дата за критеріями
             if (_noteManager.ValidateStartTime(_date))
             {
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -42,6 +45,7 @@ namespace ConsoleApp3
             }
             else
             {
+                //якщо післч методу він повертає "CANCEL", програма повертає на попередню сторінку
                 Helpers.TryReadDateTime(ref _error, out _date);
                 if (_error == "CANCEL")
                 {
