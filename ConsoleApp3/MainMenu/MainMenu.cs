@@ -11,6 +11,7 @@ namespace ConsoleApp3
         protected override Dictionary<string, IPage> Options { get; }
         protected override string Title => "Щоденник\n" +
             "(Рекомендуємо натиснути F1 та прочитати основнi функцiї кнопок)\n";
+            protected override string Title => GetClosestNote();
         private NoteManager _noteManager = new NoteManager();
         public MainMenu()
         {
