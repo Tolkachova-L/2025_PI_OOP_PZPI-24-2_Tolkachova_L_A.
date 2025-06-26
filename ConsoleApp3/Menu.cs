@@ -12,8 +12,7 @@ namespace ConsoleApp3
         protected abstract Dictionary<string, IPage> Options { get; }
         private string[] _keys => Options.Keys.ToArray();
         protected abstract string Title { get; }
-
-
+        protected virtual string Footer { get; }
 
         private void DisplayOptions()
         {
@@ -41,6 +40,7 @@ namespace ConsoleApp3
             }
             Console.ResetColor();
             Console.WriteLine();
+            Console.WriteLine(Footer);
         }
 
         protected override IPage RunImpl()
